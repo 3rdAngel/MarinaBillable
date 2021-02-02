@@ -37,6 +37,37 @@ except:
 finally:
     ddc.close()
 
+try:
+    nl = open('NameList.txt')
+except:
+    nl = open('NameList.txt', 'w')
+finally:
+    nl.close()
+
+try:
+    oS = open('opSearch.txt')
+except:
+    oS = open('opSearch.txt', 'w')
+    oS.write('SHRINK\nHULL ONLY\nQUICK\nPAINT\nANTIFOUL\nWAX\nW/C/W')
+finally:
+    oS.close()
+
+try:
+    TL = open('TechList.txt')
+except:
+    TL = open('TechList.txt', 'w')
+    TL.write('20 Caleb\n28 Chad\n36 Joe\n57 Josh\n61 Cam\n68 Ralphy\n88 Odvan\n95 Kathryn\n103 Zach')
+finally:
+    TL.close()
+
+try:
+    ch = open('custom_headers.txt')
+except:
+    ch = open('custom_headers.txt', 'w')
+    ch.write('Id\nName\nBoat\nMake\nModel\nOp\nDescript\nDate')
+finally:
+    ch.close()    
+    
 # INITIALIZED DATA STRUCTURES
 boats = dict()
 boatlist = []
