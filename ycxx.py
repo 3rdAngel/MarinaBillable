@@ -10,6 +10,7 @@ import xlsxwriter
 # PATH TO DIRECTORY OF PROGRAM FILES
 path = Path.home() / 'Documents' / 'YardCrew' 
 main_image = path.joinpath('image.png')
+path.joinpath('WhiteCards').mkdir(exist_ok=True) # if folder doesn't exist, make directory
 wc_folder = str(path.joinpath('WhiteCards'))
 
 # Get current date
