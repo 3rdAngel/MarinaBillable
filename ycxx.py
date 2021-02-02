@@ -8,10 +8,11 @@ from pandas import * #this allows calling ExcelFile
 import xlsxwriter
 
 # PATH TO DIRECTORY OF PROGRAM FILES
-path = Path.home() / 'Documents' / 'YardCrew' 
-main_image = path.joinpath('image.png')
-path.joinpath('WhiteCards').mkdir(exist_ok=True) # if folder doesn't exist, make directory
-wc_folder = str(path.joinpath('WhiteCards'))
+path = Path.cwd()
+main_image = path.joinpath('image.png')  # This image must be in the same directory as the program
+wcDir = Path.home() / 'Documents' / 'WhiteCards'  # The WhiteCards folder is in 'Documents' for easy access
+wcDir.mkdir(exist_ok=True) # if folder doesn't exist, make directory
+wc_folder = str(wcDir)
 
 # Get current date
 today = date.today()
