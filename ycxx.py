@@ -120,6 +120,9 @@ new = [x for x in new if isinstance(x['Name'], str)] #rewrites dict with only en
 for record in new:
     nm = record['Name'].split(",", 1)                #Split 'Name' only once at the first ","
     record['Name'] = nm[0]                           #reduces the Name to last name only
+    for keyy in record:
+        if isinstance(record[keyy], float):          #gets rid of "nan" entries
+            record[keyy] = ""
     
     for opc in ops: #for op code in op codes keyword list (ops) - test each line of dictionary for relavant opcodes
         if isinstance(record['Descript'], str) and record['Descript'].find(opc) >= 0: #if .find()method returns 0, there is a match. -1 is not a match
