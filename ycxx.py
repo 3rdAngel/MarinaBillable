@@ -285,7 +285,9 @@ def select_boat(selected):
     
     card.append("\t")
     card.append(selectName)
-    sp = 10 - len(selectName) # spacing for next item
+    sp = 12 - len(selectName) # spacing for next item
+    if sp <= 0:
+        sp = 2
     for j in range(0, sp, 1):
         card.append(" ")
     boat.hide()
