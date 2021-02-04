@@ -272,7 +272,6 @@ def writeTech(techName):
         Next.bg="light grey"
         done.bg="light grey"
 
-#todo
 def select_boat(selected):
     selectList = selected.split()
     selectName = selectList[0]
